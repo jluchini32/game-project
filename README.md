@@ -15,7 +15,7 @@ Bonus:
 
 -Bonus animation whether to have the coins drop down into the slots.
 
-![wireframe](connect4game/connect4wireframe.jpg)
+![wireframe](connect4wireframe.jpg)
 
 
 
