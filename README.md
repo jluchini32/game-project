@@ -1,6 +1,7 @@
 Connect 4- game README
 
 ----------------------------------------
+MVP: 
 
 This game is played on a vertical board which includes seven columns and six rows.  There is a window frame to see each piece through, which includes 42 windows. 
 
@@ -13,6 +14,8 @@ Bonus:
 -make it a 3 player game (3 colors, more rows.)
 
 -Bonus animation whether to have the coins drop down into the slots.
+
+![wireframe](connect4game/connect4wireframe.jpg)
 
 
 
