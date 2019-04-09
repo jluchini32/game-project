@@ -1,85 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Connect 4 Game</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <h1>CONNECT 4 GAME</h1>
+    <div id="gameboard">
+        <div class="row" row="0">
+            <div class="square" row="0" square="0"></div>
+            <div class="square" row="0" square="1"></div>
+            <div class="square" row="0" square="2"></div>
+            <div class="square" row="0" square="3"></div>
+            <div class="square" row="0" square="4"></div>
+            <div class="square" row="0" square="5"></div>
+            <div class="square" row="0" square="6"></div>
 
-<h1>CONNECT 4 GAME</h1>
-<h2>Player One Wins:</h2>
-<h2>Players Two Wins:</h2>
+        </div>
+        <br>
+        <div class="row" row="1">
+            <div class="square" row="1" square="0"></div>
+            <div class="square" row="1" square="1"></div>
+            <div class="square" row="1" square="2"></div>
+            <div class="square" row="1" square="3"></div>
+            <div class="square" row="1" square="4"></div>
+            <div class="square" row="1" square="5"></div>
+            <div class="square" row="1" square="6"></div>
+        </div>
+        <br>
 
-<div class="container">
-<div class= "col-0">
-    <div class="cell" id ="0-5">(0-5)</div>
-    <div class="cell" id ="0-4">(0-4)</div>
-    <div class="cell" id ="0-3">(0-3)</div>
-    <div class="cell" id ="0-2">(0-2)</div>
-    <div class="cell" id ="0-1">(0-1)</div>
-    <div class="cell" id ="0-0">(0-0)</div>
-</div>
+        <div class="row" row="2">
+            <div class="square" row="2" square="0"></div>
+            <div class="square" row="2" square="1"></div>
+            <div class="square" row="2" square="2"></div>
+            <div class="square" row="2" square="3"></div>
+            <div class="square" row="2" square="4"></div>
+            <div class="square" row="2" square="5"></div>
+            <div class="square" row="2" square="6"></div>
+        </div>
+        <br>
 
-<div id= "col-1">
-    <div class="cell" id ="1-5">(1-5)</div>
-    <div class="cell" id ="1-4">(1-4)</div> 
-    <div class="cell" id ="1-3">(1-3)</div>
-    <div class="cell" id ="1-2">(1-2)</div>
-    <div class="cell" id ="1-1">(1-1)</div>
-    <div class="cell" id ="1-0">(1-0)</div> 
-</div>
+        <div class="row" row="3">
+            <div class="square" row="3" square="0"></div>
+            <div class="square" row="3" square="1"></div>
+            <div class="square" row="3" square="2"></div>
+            <div class="square" row="3" square="3"></div>
+            <div class="square" row="3" square="4"></div>
+            <div class="square" row="3" square="5"></div>
+            <div class="square" row="3" square="6"></div>
+        </div>
+        <br>
 
-<div id= "col-2">
-    <div class="cell" id ="2-5">(2-5)</div>
-    <div class="cell" id ="2-4">(2-4)</div>
-    <div class="cell" id ="2-3">(2-3)</div>
-    <div class="cell" id ="2-2">(2-2)</div>
-    <div class="cell" id ="2-1">(2-1)</div>
-    <div class="cell" id ="2-0">(2-0)</div>
-</div>
+        <div class="row" row="4">
+            <div class="square" row="4" square="0"></div>
+            <div class="square" row="4" square="1"></div>
+            <div class="square" row="4" square="2"></div>
+            <div class="square" row="4" square="3"></div>
+            <div class="square" row="4" square="4"></div>
+            <div class="square" row="4" square="5"></div>
+            <div class="square" row="4" square="6"></div>
+        </div>
+        <br>
 
-<div id= "col-3">
-    <div class="cell" id ="3-5">(3-5)</div>
-    <div class="cell" id ="3-4">(3-4)</div>
-    <div class="cell" id ="3-3">(3-3)</div> 
-    <div class="cell" id ="3-2">(3-2)</div>
-    <div class="cell" id ="3-1">(3,1)</div>
-    <div class="cell" id ="3-0">(3-0)</div>
-</div>
+        <div class="row" row="5">
+            <div class="square" row="5" square="0"></div>
+            <div class="square" row="5" square="1"></div>
+            <div class="square" row="5" square="2"></div>
+            <div class="square" row="5" square="3"></div>
+            <div class="square" row="5" square="4"></div>
+            <div class="square" row="5" square="5"></div>
+            <div class="square" row="5" square="6"></div>
+        </div>
 
-<div id= "col-4">
-    <div class="cell" id ="4-5">(4-5)</div>
-    <div class="cell" id ="4-4">(4-4)</div>
-    <div class="cell" id ="4-3">(4,3)</div> 
-    <div class="cell" id ="4-2">(4-2)</div>
-    <div class="cell" id ="4-1">(4,1)</div>
-    <div class="cell" id ="4-0">(4-0)</div>
-</div>
-
-<div id= "col-5">
-    <div class="cell" id ="5-5">(5-5)</div>
-    <div class="cell" id ="5-4">(5-4)</div>
-    <div class="cell" id ="5-3">(5,3)</div>
-    <div class="cell" id ="5-2">(5-2)</div>
-    <div class="cell" id ="5-1">(5,1)</div>
-    <div class="cell" id ="5-0">(5-0)</div>
-</div>
-
-<div id= "col-6">
-    <div class="cell" id ="6-5">(6-5)</div>
-    <div class="cell" id ="6-4">(6-4)</div>
-    <div class="cell" id ="6-3">(6,3)</div>
-    <div class="cell" id ="6-2">(6-2)</div> 
-    <div class="cell" id ="6-1">(6-1)</div>
-    <div class="cell" id ="6-0">(6-0)</div> 
-</div>
-
-</div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
