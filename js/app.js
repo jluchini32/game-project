@@ -60,9 +60,19 @@ $('.square').click((e)=>{
     const squareNumber = $(e.target).attr('square');
     const rowNumber = $(e.target).parent().attr('row');
     // change the game.board state
-    if($(e.target).hasClass('null') &&
-    !$(`[square = ${clickedSquare}][row = ${clickedRow -1}]`).hasClass('null')){
-        game.board[rowNumber][squareNumber] = game.activePlayer
+    
+    // if($(e.target).hasClass('null') &&
+    // (!$(`[square == ${squareNumber}][row == ${rowNumber -1}]`).hasClass('null')) ||
+    // rowNumber == 5)
+     if(game.board[rowNumber][squareNumber] === null
+            && (game.board[rowNumber-1][squareNumber] !==null || 
+                rowNumber === gameboard.length -1 ))
+                console.log('abcd');
+            {
+
+    
+    
+    game.board[rowNumber][squareNumber] = game.activePlayer
         // check for victory
         checkForWin();
         // change active player
@@ -90,3 +100,6 @@ const render = () => {
         $('body').append(`<h2>A WINNAR IS ${game.winner}</h2>`)
     }
 }
+
+
+//
