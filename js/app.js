@@ -101,8 +101,13 @@ const render = () => {
             if(square !== null){
                 // fill in that div with text on the page
                 // $(`.square[square=${squareNumber}][row=${rowNumber}]`).empty().append(`<h3 class="square-text">${square}</h3>`);
-                $(`.square[square=${squareNumber}][row=${rowNumber}]`).empty().css({"backgroundColor": "red"});
 
+            if(game.board[rowNumber][squareNumber] === "RED"){
+            $(`.square[square=${squareNumber}][row=${rowNumber}]`).empty().css({"backgroundColor": "red"});
+            
+            }else if(game.board[rowNumber][squareNumber] === "BLACK"){
+                $(`.square[square=${squareNumber}][row=${rowNumber}]`).empty().css({"backgroundColor": "black"});
+                }
             }
         })
     })
