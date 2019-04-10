@@ -1,8 +1,23 @@
 *{
     text-align: center;
-    
+   
     }
     
+h1{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 32px;
+}
+
+#h1box{
+    background-color: red;
+    border-radius: 10px;
+    margin: 20px 350px 20px 350px;
+}
+
+    #gameboard{
+        background-color: blue;
+        margin: 25px 120px 25px 120px;
+    }
     .col {
         height: 100px;
     }
@@ -10,6 +25,7 @@
         width: 100px;
         height: 100px;
         border: 3px solid black;
+
         display: inline-block;
         vertical-align: top;
         text-align: center;
@@ -20,5 +36,5 @@
     }
     .square-text {
         margin-top: 30px;
-        font-size: 36px;
+        font-size: 25px;
     }
