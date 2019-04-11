@@ -1,5 +1,3 @@
-// 0 will be Os and 1 will be Xs
-
 const game = {
     board: [
         [null, null, null, null, null, null],
@@ -27,14 +25,12 @@ const changeActivePlayer = () => {
 const checkHorizontalVictory = () => {
     console.log(game.board);
     game.board.forEach((row)=>{
-     // if(row[0] == row[1] && row[1] == row[2] && row[2] == row[3] && row[0] !== null){
-    //original if check ^
         if((row[0] == row[1] && row[1] == row[2] && row[2] == row[3] && row[0] !== null) ||
         (row[1] == row[2] && row[2] == row[3] && row[3] == row[4] && row[1] !== null)  ||
         (row[2] == row[3] && row[3] == row[4] && row[4] == row[5] && row[2] !== null)  ||
         (row[3] == row[4] && row[4] == row[5] && row[5] == row[6] && row[3] !== null)){
 
-            console.log("HORIZONTAL VICTORY")
+            alert("HORIZONTAL VICTORY");
             game.active = false;
             game.winner = game.activePlayer
             // turns off the listeners on the squares
@@ -45,46 +41,50 @@ const checkHorizontalVictory = () => {
 
 const checkVerticalVictory = () => {
     game.board.forEach((square)=>{
-     // if(row[0] == row[1] && row[1] == row[2] && row[2] == row[3] && row[0] !== null){
-    //original if check ^
-// console.log(rowNumber);
-    if((game.board[5][0] == game.board[4][0] && game.board[4][0] == game.board[3][0] && game.board[3][0] == game.board[2][0] && game.board[5][0] !== null) ||
-    (game.board[4][0] == game.board[3][0] && game.board[3][0] == game.board[2][0] && game.board[2][0] == game.board[1][0] && game.board[4][0] !== null) ||
-    (game.board[3][0] == game.board[2][0] && game.board[2][0] == game.board[1][0] && game.board[1][0] == game.board[0][0] && game.board[3][0] !== null)){
+
+    //checks for vert victory in 0 coloumn
+        if((game.board[5][0] == game.board[4][0] && game.board[4][0] == game.board[3][0] && game.board[3][0] == game.board[2][0] && game.board[5][0] !== null) ||
+        (game.board[4][0] == game.board[3][0] && game.board[3][0] == game.board[2][0] && game.board[2][0] == game.board[1][0] && game.board[4][0] !== null) ||
+        (game.board[3][0] == game.board[2][0] && game.board[2][0] == game.board[1][0] && game.board[1][0] == game.board[0][0] && game.board[3][0] !== null) ||
+
+        //checks for vert victory in 1 coloumn
+        (game.board[5][1] == game.board[4][1] && game.board[4][1] == game.board[3][1] && game.board[3][1] == game.board[2][1] && game.board[5][1] !== null) ||
+        (game.board[4][1] == game.board[3][1] && game.board[3][1] == game.board[2][1] && game.board[2][1] == game.board[1][1] && game.board[4][1] !== null) ||
+        (game.board[3][1] == game.board[2][1] && game.board[2][1] == game.board[1][1] && game.board[1][1] == game.board[0][1] && game.board[3][1] !== null) ||
+
+        //checks for vert victory in 2 coloumn
+        (game.board[5][2] == game.board[4][2] && game.board[4][2] == game.board[3][2] && game.board[3][2] == game.board[2][2] && game.board[5][2] !== null) ||
+        (game.board[4][2] == game.board[3][2] && game.board[3][2] == game.board[2][2] && game.board[2][2] == game.board[1][2] && game.board[4][2] !== null) ||
+        (game.board[3][2] == game.board[2][2] && game.board[2][2] == game.board[1][2] && game.board[1][2] == game.board[0][2] && game.board[3][2] !== null) ||
+
+        //checks for vert victory in 3 coloumn
+        (game.board[5][3] == game.board[4][3] && game.board[4][3] == game.board[3][3] && game.board[3][3] == game.board[2][3] && game.board[5][3] !== null) ||
+        (game.board[4][3] == game.board[3][3] && game.board[3][3] == game.board[2][3] && game.board[2][3] == game.board[1][3] && game.board[4][3] !== null) ||
+        (game.board[3][3] == game.board[2][3] && game.board[2][3] == game.board[1][3] && game.board[1][3] == game.board[0][3] && game.board[3][3] !== null) ||
+
+        //checks for vert victory in 4 coloumn
+        (game.board[5][4] == game.board[4][4] && game.board[4][4] == game.board[3][4] && game.board[3][4] == game.board[2][4] && game.board[5][4] !== null) ||
+        (game.board[4][4] == game.board[3][4] && game.board[3][4] == game.board[2][4] && game.board[2][4] == game.board[1][4] && game.board[4][4] !== null) ||
+        (game.board[3][4] == game.board[2][4] && game.board[2][4] == game.board[1][4] && game.board[1][4] == game.board[0][4] && game.board[3][4] !== null) ||
+
+        //checks for vert victory in 5 coloumn
+        (game.board[5][5] == game.board[4][5] && game.board[4][5] == game.board[3][5] && game.board[3][5] == game.board[2][5] && game.board[5][5] !== null) ||
+        (game.board[4][5] == game.board[3][5] && game.board[3][5] == game.board[2][5] && game.board[2][5] == game.board[1][5] && game.board[4][5] !== null) ||
+        (game.board[3][5] == game.board[2][5] && game.board[2][5] == game.board[1][5] && game.board[1][5] == game.board[0][5] && game.board[3][5] !== null)) {
+
+        //checks for vert victory in 6 coloumn
+        // (game.board[5][6] == game.board[4][6] && game.board[4][6] == game.board[3][6] && game.board[3][6] == game.board[2][6] && game.board[5][6] !== null) ||
+        // (game.board[4][6] == game.board[3][6] && game.board[3][6] == game.board[2][6] && game.board[2][6] == game.board[1][6] && game.board[4][6] !== null) ||
+        // (game.board[3][6] == game.board[2][6] && game.board[2][6] == game.board[1][6] && game.board[1][6] == game.board[0][6] && game.board[3][6] !== null)) {
     
-//     (row[5[1]] == row[4[1]] && row[4[1]] == row[3[1]] && row[3[1]] == row[2[1]] && row[5] !== null) ||
-//     (row[4[1]] == row[3[1]] && row[3[1]] == row[2[1]] && row[2[1]] == row[1[1]] && row[4] !== null) ||
-//     (row[3[1]] == row[2[1]] && row[2[1]] == row[1[1]] && row[1[1]] == row[0[1]] && row[3] !== null) ||
-    
-//     (row[5[2]] == row[4[2]] && row[4[2]] == row[3[2]] && row[3[2]] == row[2[2]] && row[5] !== null) ||
-//     (row[4[2]] == row[3[2]] && row[3[2]] == row[2[2]] && row[2[2]] == row[1[2]] && row[4] !== null) ||
-//     (row[3[2]] == row[2[2]] && row[2[2]] == row[1[2]] && row[1[2]] == row[0[2]] && row[3] !== null) ||
-    
-//     (row[5[3]] == row[4[3]] && row[4[3]] == row[3[3]] && row[3[3]] == row[2[3]] && row[5] !== null) ||
-//     (row[4[3]] == row[3[3]] && row[3[3]] == row[2[3]] && row[2[3]] == row[1[3]] && row[4] !== null) ||
-//     (row[3[3]] == row[2[3]] && row[2[3]] == row[1[3]] && row[1[3]] == row[0[3]] && row[3] !== null) ||
-    
-//     (row[5[4]] == row[4[4]] && row[4[4]] == row[3[4]] && row[3[4]] == row[2[4]] && row[5] !== null) ||
-//     (row[4[4]] == row[3[4]] && row[3[4]] == row[2[4]] && row[2[4]] == row[1[4]] && row[4] !== null) ||
-//     (row[3[4]] == row[2[4]] && row[2[4]] == row[1[4]] && row[1[4]] == row[0[4]] && row[3] !== null) ||
-    
-//     (row[5[4]] == row[4[4]] && row[4[4]] == row[3[4]] && row[3[4]] == row[2[4]] && row[5] !== null) ||
-//     (row[4[4]] == row[3[4]] && row[3[4]] == row[2[4]] && row[2[4]] == row[1[4]] && row[4] !== null) ||
-//     (row[3[4]] == row[2[4]] && row[2[4]] == row[1[4]] && row[1[4]] == row[0[4]] && row[3] !== null) ||
-    
-//     (row[5[5]] == row[4[5]] && row[4[5]] == row[3[5]] && row[3[5]] == row[2[5]] && row[5] !== null) ||
-//     (row[4[5]] == row[3[5]] && row[3[5]] == row[2[5]] && row[2[5]] == row[1[5]] && row[4] !== null) ||
-//     (row[3[5]] == row[2[5]] && row[2[5]] == row[1[5]] && row[1[5]] == row[0[5]] && row[3] !== null) ||
-    
-//     (row[5[6]] == row[4[6]] && row[4[6]] == row[3[6]] && row[3[6]] == row[2[6]] && row[5] !== null) ||
-//     (row[4[6]] == row[3[6]] && row[3[6]] == row[2[6]] && row[2[6]] == row[1[6]] && row[4] !== null) ||
-//     (row[3[6]] == row[2[6]] && row[2[6]] == row[1[6]] && row[1[6]] == row[0[6]] && row[3] !== null)){
-            console.log("VERTICAL VICTORY")
+
+            alert("VERTICAL VICTORY");
             game.active = false;
             game.winner = game.activePlayer
-            // turns off the listeners on the squares
-            $('.square').off();
+            $('.square').off();       // turns off the listeners on the squares
+
         }
+    
     })
 }
 
@@ -92,18 +92,16 @@ const checkVerticalVictory = () => {
 const checkForWin = () => {
     checkHorizontalVictory();
     checkVerticalVictory();
-    // loop over the game board
    }
 
 $('.square').click((e)=>{
     // find out which square and which row
     const squareNumber = $(e.target).attr('square');
     const rowNumber = parseInt($(e.target).parent().attr('row'));
-    // change the game.board state
-    console.log(squareNumber);
-    console.log(rowNumber+1);
-    console.log(rowNumber !== game.board.length-1);
-    console.log(game.board[rowNumber+1][squareNumber])
+    // console.log(squareNumber);
+    // console.log(rowNumber+1);
+    // console.log(rowNumber !== game.board.length-1);
+    // console.log(game.board[rowNumber+1][squareNumber])
     
   prevNullCell = [];
     for(let x = rowNumber; x > 0; x -1){
