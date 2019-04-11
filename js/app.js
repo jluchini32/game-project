@@ -43,13 +43,14 @@ const checkHorizontalVictory = () => {
     })
 }
 
-// const checkVerticalVictory = () => {
-//     game.board.forEach((row)=>{
-//      // if(row[0] == row[1] && row[1] == row[2] && row[2] == row[3] && row[0] !== null){
-//     //original if check ^
-//     if((row[5[0]] == row[4[0]] && row[4[0]] == row[3[0]] && row[3[0]] == row[2[0]] && row[5] !== null) ||
-//     (row[4[0]] == row[3[0]] && row[3[0]] == row[2[0]] && row[2[0]] == row[1[0]] && row[4] !== null) ||
-//     (row[3[0]] == row[2[0]] && row[2[0]] == row[1[0]] && row[1[0]] == row[0[0]] && row[3] !== null) ||
+const checkVerticalVictory = () => {
+    game.board.forEach((square)=>{
+     // if(row[0] == row[1] && row[1] == row[2] && row[2] == row[3] && row[0] !== null){
+    //original if check ^
+// console.log(rowNumber);
+    if((game.board[5][0] == game.board[4][0] && game.board[4][0] == game.board[3][0] && game.board[3][0] == game.board[2][0] && game.board[5][0] !== null) ||
+    (game.board[4][0] == game.board[3][0] && game.board[3][0] == game.board[2][0] && game.board[2][0] == game.board[1][0] && game.board[4][0] !== null) ||
+    (game.board[3][0] == game.board[2][0] && game.board[2][0] == game.board[1][0] && game.board[1][0] == game.board[0][0] && game.board[3][0] !== null)){
     
 //     (row[5[1]] == row[4[1]] && row[4[1]] == row[3[1]] && row[3[1]] == row[2[1]] && row[5] !== null) ||
 //     (row[4[1]] == row[3[1]] && row[3[1]] == row[2[1]] && row[2[1]] == row[1[1]] && row[4] !== null) ||
@@ -78,19 +79,19 @@ const checkHorizontalVictory = () => {
 //     (row[5[6]] == row[4[6]] && row[4[6]] == row[3[6]] && row[3[6]] == row[2[6]] && row[5] !== null) ||
 //     (row[4[6]] == row[3[6]] && row[3[6]] == row[2[6]] && row[2[6]] == row[1[6]] && row[4] !== null) ||
 //     (row[3[6]] == row[2[6]] && row[2[6]] == row[1[6]] && row[1[6]] == row[0[6]] && row[3] !== null)){
-//             console.log("VERTICAL VICTORY")
-//             game.active = false;
-//             game.winner = game.activePlayer
-//             // turns off the listeners on the squares
-//             $('.square').off();
-//         }
-//     })
-// }
+            console.log("VERTICAL VICTORY")
+            game.active = false;
+            game.winner = game.activePlayer
+            // turns off the listeners on the squares
+            $('.square').off();
+        }
+    })
+}
 
 
 const checkForWin = () => {
     checkHorizontalVictory();
-    // checkVerticalVictory();
+    checkVerticalVictory();
     // loop over the game board
    }
 
